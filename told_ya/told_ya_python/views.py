@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .models import *
+
 # Create your views here.
 
 def main(request):
@@ -15,5 +17,14 @@ def phone_input(request):
     return render(request, 'argument/phone-input.html', context)
 
 def user(request):
-    context = {}
+    users = User.objects.all()  # Get all users
+    context = {'users': users}
     return render(request, 'argument/user.html', context)
+
+def home(request):
+    context = {}
+    return render(request, 'argument/home.html', context)
+
+def argument(request):
+    context = {}
+    return render(request, 'argument/argument.html', context)

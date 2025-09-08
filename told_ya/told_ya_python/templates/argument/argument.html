@@ -1,0 +1,18 @@
+{% extends "argument/main.html" %}
+{% load static %}
+{% block content %}
+<div>
+  <h1>Argument Topic</h1>
+  <p>This is a detailed explanation of the argument topic.</p>
+
+  <textarea
+    rows="4"
+    cols="50"
+    placeholder="Enter your argument here..."
+  ></textarea>
+  <br />
+  <button type="button" class="btn btn-success" onclick="submitArgument()">
+    Submit Argument
+  </button>
+</div>
+{% endblock content %}

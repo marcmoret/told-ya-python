@@ -1,1 +1,9 @@
-<h3>Phone Input</h3>
+{% extends "argument/main.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="phone-input-container">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 555-5555" />
+  </div>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "argument/main.html" %}
+{% load static %} 
+{% block content %}
+<h1>Argument Component</h1>
+<p>This is the main template for the Argument component.</p>
+<div>
+  <img src="{% static 'images/debate-escolar.jpg' %}" alt="Example Image" />
+</div>
+<div>
+  <button type="button" class="btn btn-primary" onclick="handleClick()">
+    Get Started
+  </button>
+</div>
+<script>
+  function handleClick() {
+    window.location.href = "{% url 'user' %}";
+  }
+</script>
+{% endblock content %}

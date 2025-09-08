@@ -1,1 +1,16 @@
-<h3>User Page</h3>
+{% extends "argument/main.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="form-inline my-2 my-lg-0">
+    <h1>User Information</h1>
+    {% if users %}
+    {% for user in users %}
+      <p><strong>{{ user.name|capfirst }}:</strong> {{ user.phone_number }}</p>
+    {% endfor %}
+    {% else %}
+      <p>No user data available.</p>
+    {% endif %}
+    <p>This is the user page.</p>
+  </div>
+{% endblock content %}
